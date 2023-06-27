@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /test
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./testdb
+    username: AUTO
+    password: AUTO
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl      
+
+# logging:
+#     level: 
+#       root: TRACE

@@ -1,0 +1,7 @@
+﻿.project
+.classpath
+/.settings
+/bin/
+target/
+.vscode
+financedb.*

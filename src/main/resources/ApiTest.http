@@ -1,0 +1,31 @@
+@domain=localhost:8080
+@context=test
+
+### Basic CRUD
+POST http://{{domain}}/{{context}}/heroes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Eric"
+}
+###
+PUT http://{{domain}}/{{context}}/heroes/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "John"
+}
+###
+GET  http://{{domain}}/{{context}}/heroes HTTP/1.1
+###
+GET  http://{{domain}}/{{context}}/heroes/1 HTTP/1.1
+###
+DELETE  http://{{domain}}/{{context}}/heroes/1 HTTP/1.1
+###
+GET http://{{domain}}/{{context}}/heroes/search?name=j HTTP/1.1
+
+
+### Spring Retry
+GET http://{{domain}}/{{context}}/retry/test1 HTTP/1.1
+###
+GET http://{{domain}}/{{context}}/retry/test2 HTTP/1.1
